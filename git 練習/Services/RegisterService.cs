@@ -11,9 +11,17 @@ namespace git_練習.Services
         {
             if (model.Email.Equals("leo604leo604@gmail.com"))
             {
-                return true;
+                Console.WriteLine("帳號已存在，請重新輸入帳號");
+                return false;
             }
-            return false;
+
+            return InsertAccountToDB(model);
+            
+        }
+
+        public bool InsertAccountToDB(UserModel model)
+        {
+            return true;
         }
 
         public bool SendEmail(string content)
