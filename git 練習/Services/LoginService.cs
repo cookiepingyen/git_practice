@@ -27,5 +27,15 @@ namespace git_練習.Services
                 Console.WriteLine("登入成功");
             }
         }
+
+        public bool IfAlreadyLogin(UserModel user)
+        {
+            return true;
+        }
+
+        public void Logout(UserModel user)
+        {
+            Console.WriteLine("Logout");
+        }
     }
 }
