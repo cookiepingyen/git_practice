@@ -13,5 +13,19 @@ namespace git_練習.Services
         {
             return true;
         }
+
+        public bool TwoStepValidation(UserModel model)
+        {
+            Console.WriteLine("發送二階段認證");
+            return true;
+        }
+
+        public void Notice(UserModel user)
+        {
+            if (TwoStepValidation(user) == true)
+            {
+                Console.WriteLine("登入成功");
+            }
+        }
     }
 }
